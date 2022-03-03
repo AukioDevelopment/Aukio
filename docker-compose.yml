@@ -6,3 +6,12 @@ services:
     build:
       context: .
       dockerfile: AuthenticationService/Dockerfile
+    ports:
+        - "50000:80"
+        - "50001:443"
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: APIGateway/Dockerfile
+

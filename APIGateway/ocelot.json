@@ -1,0 +1,17 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/weatherforecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authenticationservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/weatherforecast",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}
+
